@@ -1,0 +1,11 @@
+version: '3'
+services:
+  webhook_proxy:
+    build: .
+    ports:
+      - 3033:3033
+    env_file:
+      - .env.local
+    volumes:
+      - .:/app:cached
+
